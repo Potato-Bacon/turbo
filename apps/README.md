@@ -2,14 +2,14 @@
 
 Alternative way to setup (for cyclic) using turborepo & npm workspaces
 
-- client - react
-- server - express
+* client - react
+* server - express
 
 ## Suggested directory structure
 
 ├── apps
-│ ├── client
-│ └── server
+│   ├── client
+│   └── server
 └── packages
 
 ## Client
@@ -115,3 +115,7 @@ Also add these scripts:
 `npm run build`
 `npm run prune` - drops dev dep
 `npm run start`
+
+## installing npm modules in future
+
+ npm install morgan --workspace server
