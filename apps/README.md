@@ -63,7 +63,7 @@ app.listen(port, () => {
 
 Go to the root folder, create root package.json
 
-````js title="turbo.json"
+```js title="turbo.json"
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
@@ -86,7 +86,7 @@ Go to the root folder, create root package.json
     }
   }
 }
-
+```
 
 ## Workspaces
 
@@ -97,4 +97,21 @@ npm, yarn, pnpm
     "packages/*",
     "apps/*"
   ]
-````
+```
+
+Also add these scripts:
+
+```js
+  "scripts": {
+    "build": "turbo build",
+    "start": "cd apps/server && npm run start"
+  },
+```
+
+## Cyclic
+
+`git clone`
+`npm install` - workspace
+`npm run build`
+`npm run prune` - drops dev dep
+`npm run start`
